@@ -3,6 +3,7 @@
 
 모델링
 ------
+
 `LoopTools > space`
 선택한 점들을 동일한 간격으로 정리해준다.
 
@@ -51,7 +52,7 @@ Edge Slide에도 적용된다
 //Shift + rightMouse 버튼으로 그린다
 
 `Manipulate Center Point Mode`  
-![image](https://user-images.githubusercontent.com/30430227/130587791-1b2f3b50-948e-45d8-a251-1559fc025adc.png)  
+.. image:: https://user-images.githubusercontent.com/30430227/130587791-1b2f3b50-948e-45d8-a251-1559fc025adc.png
 //여러 오브젝트를 선택후 Scale 명령 시 중심점을 중심으로 <이동>한다
 <br>
 
@@ -292,10 +293,9 @@ Nature
 -----------
 
 `나무 Arbaro 실행방법`
-```
-//cd <arbaro directory> 
-//java -jar arbaro_gui.jar
-```
+
+>>> cd <arbaro directory> 
+>>> java -jar arbaro_gui.jar
 
 `Clipping Border 단면 보기 Edit Mode에서 Alt +B`
 View>Clipping Border 단면 보기
@@ -403,7 +403,8 @@ Short description of error
 File/user preferences/input/3D view/Weight Paint/WeightPaintSampleGroup
  (Because it uses the same short cut)
 And then, I have to add the following shortcut (like for blender shortcut):
-- File/user preferences/input/3D view/3D view (global)/Add new => view3d.select + case shift + Click left + center + object
+- File/user preferences/input/3D view/3D view (global)/Add new 
+=> view3d.select + case shift + Click left + center + object
 Because this initial shortcut does'nt seem to work :
 File/user preferences/input/3D view/3D view (global)/Select or Deselect All (Shift Select Mouse)
 //////////////////////////////////////////////////
@@ -549,7 +550,7 @@ Context Attribute : space_data.viewport_shade(반영할 속성은)
 //sculpt.dynamic_topology_toggle(ctrl + D)//wm.context_toggle//tool_settings.sculpt.use_symmetry_x
 
 ```
-![image](https://user-images.githubusercontent.com/30430227/130591252-a5b39f6e-0918-49b3-8dd0-9af8ab73b24e.png)
+.. image:: https://user-images.githubusercontent.com/30430227/130591252-a5b39f6e-0918-49b3-8dd0-9af8ab73b24e.png
 
 ```
 ⓾Mesh Select Mode::
@@ -589,10 +590,9 @@ Node 자동연결
 
 특정영역만(마스킹) 칠하기
 //Edit 모드 : 페이스 선택 > Texture Paint 모드에서 
-```
-![image](https://user-images.githubusercontent.com/30430227/130591345-cb9252ab-24df-4d11-9518-82ad2431eb89.png)
 
-```
+.. image:: https://user-images.githubusercontent.com/30430227/130591345-cb9252ab-24df-4d11-9518-82ad2431eb89.png
+
 ⓮Node Wrangler
 //ctrl + shift + 클릭 : output
 //ctrl + right Mouse Drag - 연결
@@ -660,9 +660,7 @@ Proxy
 `PreStyle 안먹힐 때`
 //씬에 카메라가 없을 경우 카메라를 생성하면 된다
 
-### blender2.79
-
-```
+>>> blender2.79
 # shift 조절자 드래그 XZ축 고정 이동(내 프리셋은 되지 않는다)
 //view3d.manipulator > Planar Constraint 기능이다 ;; 기존 Manipulator에서 shift 조합키를 빼고, 
 //새로운 Maniplator에서 Confirm on Release 와 Planar constraint를 체크한다
@@ -672,7 +670,7 @@ Proxy
 # Cycle 프로젝트 라이트
 # Cut Knife
 # Particle Copy to other Object
-```
+>>>
 
 `Armature`
 //Recalculator 본의 축방향을 바꿈
@@ -686,7 +684,7 @@ Proxy
 `Weight Transform`
 //Source Layers : By Name
 
-![image](https://user-images.githubusercontent.com/30430227/130591652-a191c48e-383d-4d4e-88cf-e1b744f3ae74.png)
+.. image:: https://user-images.githubusercontent.com/30430227/130591652-a191c48e-383d-4d4e-88cf-e1b744f3ae74.png
 
 `Bone 숨기기(Armature) 설정 바꿀 것`
 //armature.hide
@@ -695,7 +693,7 @@ Proxy
 `DopeSheet에서 색상 적용`
 //Pose Mode Pose모양(Data) 탭에서 Bone Group 설정
 
-![image](https://user-images.githubusercontent.com/30430227/130591729-c532924a-40bc-4074-873a-5409187b17e0.png)
+.. image:: https://user-images.githubusercontent.com/30430227/130591729-c532924a-40bc-4074-873a-5409187b17e0.png
 
 `Driver>Expression`
 radians(sin(frame/30))*180// 시간이 지남에 따라 +-180로 주기 회전한다
@@ -885,8 +883,8 @@ Context Pi menu : 'W'
 data.shape_keys.key_blocks["Key 1"].value
 
 `Pose Library`
-```
-$포즈 라이브러리에는 현재 레이어 본의 정보를 저장한다.
+
+>>> 포즈 라이브러리에는 현재 레이어 본의 정보를 저장한다.
 저장: 저장할 본을 선택하고 '+' 버튼을 누른다
 적용: 돋보기 버튼(선택한 본만 적용된다, 아무것도 선택하지 않으면 전체 본에 적용된다)
 #Pose 미러복사(오른 클릭 Copy, Paste X-Flip Pose)
@@ -902,8 +900,8 @@ Modifier에서 Armature를 Copy한 후 원래 Armature Modifier를 'Apply'한다
 포즈모드로 들어가 Apply Reset Pose한다
 #IK 로테이션 문제
 =Edit 모드에서 Bone을 꺽어야한다(포즈모드에서하면 안됨)
-#손과 발의 IK 본은 Root본에 Parent하고 Target은 힙본에 한다
-```
+>>> 손과 발의 IK 본은 Root본에 Parent하고 Target은 힙본에 한다
+
 
 `Copy Location, Rotation`
 복사할려는 물체를 먼저 선택하고 대상을 나중에 선택한다
