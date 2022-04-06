@@ -5,4 +5,3 @@ Mograph
 
    basic
    mographA
-   mographB
