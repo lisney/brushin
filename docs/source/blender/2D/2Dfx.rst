@@ -10,7 +10,7 @@
 
 .. image:: https://user-images.githubusercontent.com/30430227/126256277-0b175de7-e776-4ec7-b7a9-eaaac2df7c35.png 
 
->>>1. Voronoi
+>>> 1. Voronoi
 2. Gradient 생성 후 Color>MixRGB(SoftLight 
 3. Texture Coordinate
 4. MixShader Fac(검정부분 투명 
@@ -48,7 +48,7 @@
 
 ``SeparateXYZ, MUsgraveTexture``
 
-** 물결 3**
+**물결 3**
 
 .. image:: https://user-images.githubusercontent.com/30430227/126418078-a78fd6cc-3a09-4539-888d-4c4ee6498f12.png 
 
@@ -64,13 +64,13 @@
 
 .. image:: https://user-images.githubusercontent.com/30430227/126263309-6538cbf5-0290-4b55-8021-a87c57391850.png 
 
-** 파장 2**
+**파장 2**
 
 .. image:: https://user-images.githubusercontent.com/30430227/126264267-dd171e3f-7cab-42bd-8ec9-8bcba9825fa7.png 
 
 .. image:: https://user-images.githubusercontent.com/30430227/126264306-7c09799a-59b9-421a-a46a-da1144199845.png 
 
-** 파장 3 **
+**파장 3**
 
 .. image:: https://user-images.githubusercontent.com/30430227/126265471-37f6d06a-76a0-4926-8095-e36365a908b3.png 
 
@@ -83,7 +83,7 @@
 
 .. image:: https://user-images.githubusercontent.com/30430227/126418818-daade5f2-1bcc-453c-a60f-e75a07cf4d19.png 
 
-`` 물결 반짝이 애니 추가``
+``물결 반짝이 애니 추가``
 
 .. image:: https://user-images.githubusercontent.com/30430227/126419076-aa8610d8-ca1f-4de4-ba39-060e85814d73.png 
 
@@ -97,7 +97,7 @@
 
 .. image:: https://user-images.githubusercontent.com/30430227/126256205-d018d38d-8c75-4a7a-86dc-a8996ee73cbb.png 
 
->>>1. Checker Texture
+>>> 1. Checker Texture
 2. Separate - Combine
 3. Wave, Gradient Texture Mix(Screen 
 
@@ -121,14 +121,17 @@
 ``>BackfaceCulling``
 
 3. 평면 얼굴
+
 .. image:: https://user-images.githubusercontent.com/30430227/130608808-a6f88753-8e52-4a7a-8619-49ade63942c7.png   
 .. image:: https://user-images.githubusercontent.com/30430227/130609121-e5a3e172-fee6-4e24-84b7-ed3c98d79aec.png 
 
 
 ``복사할 면 선택``
+
 .. image:: https://user-images.githubusercontent.com/30430227/130608889-118fd5c8-ef3c-40c5-8741-138e278b813c.png   
 
 ``붙여넣을 면 선택``
+
 .. image:: https://user-images.githubusercontent.com/30430227/130609029-21b01a6e-4c2f-4016-899c-1b8982462323.png   
 
 
@@ -144,7 +147,9 @@ Water Ripple
 
 심플 구름  
 -----------
+
 ``Musgrave``  
+
 .. image:: https://user-images.githubusercontent.com/30430227/133928242-f07ab0f6-b752-4039-a32e-73dcb0f98c39.png   
 .. image:: https://user-images.githubusercontent.com/30430227/133928261-fb442e79-4be5-43d9-99bc-43ffae94c651.png   
 
