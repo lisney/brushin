@@ -59,11 +59,11 @@ VSCode
 
 .. code-block:: console
 
-"python.autoComplete.extraPaths": [
-     "d:\\my_project\\blender_autocomplete\\2.90",
-     "_PATH_TO_BLENDER_\\2.90\\scripts\\modules",
-]
-_PATH_TO_BLENDER_ 블렌더 설치 패스
+   "python.autoComplete.extraPaths": [
+      "d:\\my_project\\blender_autocomplete\\2.90",
+      "_PATH_TO_BLENDER_\\2.90\\scripts\\modules",
+   ]
+   _PATH_TO_BLENDER_ 블렌더 설치 패스
 
 
 코딩
@@ -77,18 +77,18 @@ _PATH_TO_BLENDER_ 블렌더 설치 패스
 
 .. code-block:: console
 
-import bpy
+   import bpy
 
-from random import randint
+   from random import randint
 
-for i in range(5:
-    x = randint(-3, 3
-    y = randint(-3, 3
-    z = randint(-3, 3
-    bpy.ops.mesh.primitive_monkey_add(location=(x,y,z
-    bpy.ops.object.modifier_add(type='SUBSURF'
-    bpy.context.object.modifiers['Subdivision'].render_levels = 3
-    bpy.context.object.modifiers['Subdivision'].levels = 3
+   for i in range(5:
+       x = randint(-3, 3
+       y = randint(-3, 3
+       z = randint(-3, 3
+       bpy.ops.mesh.primitive_monkey_add(location=(x,y,z
+       bpy.ops.object.modifier_add(type='SUBSURF'
+       bpy.context.object.modifiers['Subdivision'].render_levels = 3
+       bpy.context.object.modifiers['Subdivision'].levels = 3
 
 
 2. 패널 - bpy.types.Panel
@@ -97,99 +97,102 @@ for i in range(5:
 
 .. code-block:: console
 
-import bpy
+   import bpy
 
-class CrayPanel(bpy.types.Panel:
-    bl_label = "블랜더 패널"
-    bl_space_type = 'PROPERTIES' 
-    bl_region_type ='WINDOW'   # properties창 그룹의
-    bl_context = 'collection'  # collection 탭(콘텐스트에 생긴다
+   class CrayPanel(bpy.types.Panel:
+     bl_label = "블랜더 패널"
+     bl_space_type = 'PROPERTIES' 
+     bl_region_type ='WINDOW'   # properties창 그룹의
+     bl_context = 'collection'  # collection 탭(콘텐스트에 생긴다
  
-    def draw(self, context:
-        self.layout.row(.label(text='블렌더의 세계', icon='WORLD_DATA'
+     def draw(self, context:
+         self.layout.row(.label(text='블렌더의 세계', icon='WORLD_DATA'
 
-bpy.utils.register_class(CrayPanel
+   bpy.utils.register_class(CrayPanel
 
 
-- @ 데코레이션
+- 데코레이션
 
-`@ 데코함수명 - 다음에 오는 함수를 데코함수로 장식`
+데코함수명
+ 다음에 오는 함수를 데코함수로 장식`
 
-import datetime
+.. code-block:: console
 
-def datetime_decorator(func:
-    def decorated(:
+   import datetime
+
+   def datetime_decorator(func:
+     def decorated(:
         print(datetime.datetime.now(
         func(
         print(datetime.datetime.now(
-    return decorated
+     return decorated
 
-@datetime_decorator
-def main_function_1(:
-    print("MAIN FUNCTION 1 START"
+   @datetime_decorator
+   def main_function_1(:
+     print("MAIN FUNCTION 1 START"
 
-@datetime_decorator
-def main_function_2(:
-    print("MAIN FUNCTION 2 START"
+   @datetime_decorator
+   def main_function_2(:
+     print("MAIN FUNCTION 2 START"
     
-main_function_1(
-main_function_2(
+   main_function_1(
+   main_function_2(
 
 
 `*args, **kwargs 여러 개의 인수`
 
 .. code-block:: console
 
-def full_name(*names:
-    for name in names:
+   def full_name(*names:
+      for name in names:
         print(name[0],name[1:3], end=' '
     print('\n'
     
-full_name('이천수','안정환'
-full_name('이천수'
+   full_name('이천수','안정환'
+   full_name('이천수'
 
 
 `클래스 사용`
 
 .. code-block:: console
 
-import datetime
+   import datetime
 
-class DatetimeDecorator:
-    def __init__(self,f:
+   class DatetimeDecorator:
+     def __init__(self,f:
         self.func = f
         
-    def __call__(self,*args,**kwargs:
+     def __call__(self,*args,**kwargs:
         print(datetime.datetime.now(
         self.func(*args, **kwargs
         print(datetime.datetime.now(
 
-class MainClass:
-    @DatetimeDecorator
-    def main_function_10(:
+   class MainClass:
+     @DatetimeDecorator
+     def main_function_10(:
         print('Function 1 start'
         
     @DatetimeDecorator
     def main_function_20(:
         print('Function 2 start'
 
-my = MainClass(
+   my = MainClass(
     
-my.main_function_10(
-my.main_function_20(
+   my.main_function_10(
+   my.main_function_20(
 
 
 3. 오브젝트 패널 
 
 .. code-block:: console
 
-import bpy
-class HelloWorld(bpy.types.Panel:
-    bl_label = '헬로월드'
-    bl_idname = 'OBJECT_PT_hello'
-    bl_space_type = 'PROPERTIES'
-    bl_region_type = 'WINDOW'
-    bl_context = 'object'
+   import bpy
+   class HelloWorld(bpy.types.Panel:
+     bl_label = '헬로월드'
+     bl_idname = 'OBJECT_PT_hello'
+     bl_space_type = 'PROPERTIES'
+     bl_region_type = 'WINDOW'
+     bl_context = 'object'
 
     def draw(self, context:
         layout = self.layout
@@ -208,15 +211,15 @@ class HelloWorld(bpy.types.Panel:
         row.operator('object.modifier_add'.type="SUBSURF"   
         # row.operator('object.subdivision_set' # 상동 기능, F3 키 명령어 팝업에서 .ops, ( 뺀 이름
 
-def register(:
-    bpy.utils.register_class(HelloWorld
+   def register(:
+     bpy.utils.register_class(HelloWorld
 
-def unregister(:
-    bpy.utils.unregister_class(HelloWorld
+   def unregister(:
+     bpy.utils.unregister_class(HelloWorld
 
-if __name__ == '__main__':
-    register(
-
+   if __name__ == '__main__':
+     register(
+ 
 
 > 블렌더 시작 스크립트 파일 폴더
 
@@ -232,21 +235,21 @@ if __name__ == '__main__':
 
 .. code-block:: console
 
-import bpy
+   import bpy
 
-# print 내장 콘솔 출력 - 한글 지원
-# def print(data:
-#     window=bpy.context.window_manager.windows[0]
-#     screen = window.screen
-#     for area in screen.areas:
-#         if area.type == 'CONSOLE':
-#             bpy.ops.console.scrollback_append(
-#                 {'window': window, 'screen': screen, 'area': area},
-#                 text=str(data
+   # print 내장 콘솔 출력 - 한글 지원
+   # def print(data:
+   #     window=bpy.context.window_manager.windows[0]
+   #     screen = window.screen
+   #     for area in screen.areas:
+   #         if area.type == 'CONSOLE':
+   #             bpy.ops.console.scrollback_append(
+   #                 {'window': window, 'screen': screen, 'area': area},
+   #                 text=str(data
 
-class CustomArrayOperator(bpy.types.Operator:
-    # 오퍼레이터 아이디값[
-    bl_idname = "object.custom_draw"
+   class CustomArrayOperator(bpy.types.Operator:
+     # 오퍼레이터 아이디값[
+     bl_idname = "object.custom_draw"
     # 팝업창 이름
     bl_label = "Arr 배열 복사"
 
@@ -285,11 +288,11 @@ class CustomArrayOperator(bpy.types.Operator:
         
         return {'FINISHED'}
 
-bpy.utils.register_class(CustomArrayOperator
+   bpy.utils.register_class(CustomArrayOperator
 
 **test call**
 
-bpy.ops.object.custom_draw('INVOKE_DEFAULT'
+bpy.ops.object.custom_draw('INVOKE_DEFAULT')
 
 
 - bpy.data.objects[org_name].select_set(True
@@ -308,17 +311,19 @@ OK 버튼을 누르면 execute( 함수가 실행되는 거지요.
 
 .. image:: https://user-images.githubusercontent.com/30430227/143569098-54cdcfb2-b183-46e3-b80c-82f8194ad475.png
 
-import bpy
+.. code-block:: console
 
-class C_PROP(bpy.types.PropertyGroup:
-    x_repeat: bpy.props.IntProperty(name="X반복", default=0
-    y_repeat: bpy.props.IntProperty(name="Y반복", default=0
+   import bpy
 
-class C_PANEL(bpy.types.Panel:
-    bl_label = "VIEW 3D"
-    bl_category = "브러시"
-    bl_space_type = "VIEW_3D"
-    bl_region_type = "UI"
+   class C_PROP(bpy.types.PropertyGroup:
+     x_repeat: bpy.props.IntProperty(name="X반복", default=0
+     y_repeat: bpy.props.IntProperty(name="Y반복", default=0
+
+   class C_PANEL(bpy.types.Panel:
+     bl_label = "VIEW 3D"
+     bl_category = "브러시"
+     bl_space_type = "VIEW_3D"
+     bl_region_type = "UI"
 
     def draw(self, context:
         row = self.layout.row(
@@ -336,11 +341,11 @@ class C_PANEL(bpy.types.Panel:
         row = self.layout.row(
         row.operator("cray.spin", text="복사"
     
-class C_OPER(bpy.types.Operator:
-    bl_idname = 'cray.spin'
-    bl_label = 'cray.spinoperator'
+   class C_OPER(bpy.types.Operator:
+     bl_idname = 'cray.spin'
+     bl_label = 'cray.spinoperator'
 
-    def execute(self, context:        
+     def execute(self, context:        
         print(context.scene.c_property.x_repeat, context.scene.c_property.y_repeat
         
         selected_objects=bpy.context.selected_objects
@@ -364,51 +369,53 @@ class C_OPER(bpy.types.Operator:
         
         return {'FINISHED'}
     
-bpy.utils.register_class(C_PROP
-bpy.types.Scene.c_prop = bpy.props.PointerProperty(type=C_PROP
-bpy.utils.register_class(C_OPER
-bpy.utils.register_class(C_PANEL
+   bpy.utils.register_class(C_PROP
+   bpy.types.Scene.c_prop = bpy.props.PointerProperty(type=C_PROP
+   bpy.utils.register_class(C_OPER
+   bpy.utils.register_class(C_PANEL
 
 
 6. 애드온
 
 bl_info - 애드온을 위한 변수
 
-bl_info = {
-    "name": "CraySpin",
-    "author": "Cray",
-    "version": (0, 1, 0,
-    "blender": (2, 80, 0,
-    "location": "View3D > Sidebar > cray",
-    "description": "오브젝트 배열 복사 애드온 샘플코드",
-    "category": "CrayTool",
-}
+.. code-block:: console
 
--------------------------
+   bl_info = {
+      "name": "CraySpin",
+      "author": "Cray",
+      "version": (0, 1, 0,
+      "blender": (2, 80, 0,
+      "location": "View3D > Sidebar > cray",
+      "description": "오브젝트 배열 복사 애드온 샘플코드",
+      "category": "CrayTool",
+   }
 
-import bpy
+.. code-block:: console
 
-def print(*datas:
-    window=bpy.context.window_manager.windows[0]
-    screen = window.screen
-    for area in screen.areas:
+   import bpy
+
+   def print(*datas:
+     window=bpy.context.window_manager.windows[0]
+     screen = window.screen
+     for area in screen.areas:
         if area.type == 'CONSOLE':
             for data in datas:
                 bpy.ops.console.scrollback_append(
                     {'window': window, 'screen': screen, 'area': area},
                     text=str(data
 
-class CRAYSPIN_PROPERTY(bpy.types.PropertyGroup:
-    x_repeat: bpy.props.IntProperty(name="X반복", default=0
-    y_repeat: bpy.props.IntProperty(name="Y반복", default=0
+   class CRAYSPIN_PROPERTY(bpy.types.PropertyGroup:
+     x_repeat: bpy.props.IntProperty(name="X반복", default=0
+     y_repeat: bpy.props.IntProperty(name="Y반복", default=0
 
-class CRAYSPIN_PT_panel(bpy.types.Panel:
-    bl_label = "크레이 스핀 도구창"
-    bl_category = "크레이"
-    bl_space_type = "VIEW_3D"
-    bl_region_type = "UI"
+   class CRAYSPIN_PT_panel(bpy.types.Panel:
+     bl_label = "크레이 스핀 도구창"
+     bl_category = "크레이"
+     bl_space_type = "VIEW_3D"
+     bl_region_type = "UI"
 
-    def draw(self, context:
+     def draw(self, context:
         row = self.layout.row(
         row.label(text="선택 오브젝트 : ", icon='OBJECT_DATA'
         box = self.layout.box(
@@ -424,9 +431,9 @@ class CRAYSPIN_PT_panel(bpy.types.Panel:
         row = self.layout.row(
         row.operator("cray.spinoperator", text="복사"
     
-class CRAYSPIN_Operator(bpy.types.Operator:
-    bl_idname = 'cray.spinoperator'
-    bl_label = 'cray.spinoperator'
+   class CRAYSPIN_Operator(bpy.types.Operator:
+     bl_idname = 'cray.spinoperator'
+     bl_label = 'cray.spinoperator'
 
     def execute(self, context:        
         print(context.scene.crayspin_property.x_repeat, context.scene.crayspin_property.y_repeat
@@ -451,29 +458,29 @@ class CRAYSPIN_Operator(bpy.types.Operator:
         
         return {'FINISHED'}
     
-classes = (
-   CRAYSPIN_PROPERTY,
-   CRAYSPIN_PT_panel,
-   CRAYSPIN_Operator,
+   classes = (
+    CRAYSPIN_PROPERTY,
+    CRAYSPIN_PT_panel,
+    CRAYSPIN_Operator,
 
 
 
-def register(:
-    for cls in classes:
+   def register(:
+     for cls in classes:
         bpy.utils.register_class(cls
-    bpy.types.Scene.crayspin_property = bpy.props.PointerProperty(type=CRAYSPIN_PROPERTY
+     bpy.types.Scene.crayspin_property = bpy.props.PointerProperty(type=CRAYSPIN_PROPERTY
 
- unregister함수 - 애드온 체크해제 할 때 실행
+   unregister함수 - 애드온 체크해제 할 때 실행
 
-def unregister(:
-    for cls in classes:
-        bpy.utils.unregister_class(cls
-    del bpy.types.Scene.crayspin_property
+   def unregister(:
+     for cls in classes:
+         bpy.utils.unregister_class(cls
+     del bpy.types.Scene.crayspin_property
 
-블렌더 실행할 때 해당 스크립트 실행을 막는다.(main이 아니므로 자체적으로 실행해야 실행된다.(실행할 때 main이다 
+   블렌더 실행할 때 해당 스크립트 실행을 막는다.(main이 아니므로 자체적으로 실행해야 실행된다.(실행할 때 main이다 
 
-if __name__ == "__main__":
-    register(
+   if __name__ == "__main__":
+      register(
 
 
 UI 배끼기
@@ -500,50 +507,55 @@ CSV 그래프
 
 1. import csv
 
-import csv
+.. code-block:: console
 
-with open('c:/users/3dprinter/desktop/sample.csv' as f:
-    readout = list(csv.reader(f
-    print(readout  #  시스템 콘솔에서 확인
+   import csv
+
+   with open('c:/users/3dprinter/desktop/sample.csv' as f:
+     readout = list(csv.reader(f
+     print(readout  #  시스템 콘솔에서 확인
 
 
 2. 바 생성 > Cube 생성 후 info 창에서 파이썬 명령 복사
 
 .. image:: https://user-images.githubusercontent.com/30430227/144152726-ac4bfe53-54ad-4348-b55a-87741fd42f2d.png
 
-import csv
-import bpy
+.. code-block::
 
-bar_space = 1.5
-bar_width = 1
+   import csv
+   import bpy
 
-with open('c:/users/3dprinter/desktop/sample.csv' as f:
-    readout = list(csv.reader(f
-    # print(readout
+   bar_space = 1.5
+   bar_width = 1
+
+   with open('c:/users/3dprinter/desktop/sample.csv' as f:
+     readout = list(csv.reader(f
+     # print(readout
+     
+   for i in readout:
+     placement = readout.index(i # 인덱스
+     bpy.ops.mesh.primitive_cube_add(size=1
+     new_bar = bpy.context.object # 현재 선택된 오브젝트
     
-for i in readout:
-    placement = readout.index(i # 인덱스
-    bpy.ops.mesh.primitive_cube_add(size=1
-    new_bar = bpy.context.object # 현재 선택된 오브젝트
-    
-    for vert in new_bar.data.vertices:
-        vert.co[1] += 0.5 # y방향으로, co[0]- X 방향 # Y 축 원점 -> 바닥
-        vert.co[0] += placement*bar_space + 0.5 # X 축 원점 -> 좌측
+     for vert in new_bar.data.vertices:
+         vert.co[1] += 0.5 # y방향으로, co[0]- X 방향 # Y 축 원점 -> 바닥
+         vert.co[0] += placement*bar_space + 0.5 # X 축 원점 -> 좌측
         
-    new_bar.scale = (bar_width, float(i[1], 1
+     new_bar.scale = (bar_width, float(i[1], 1
 
 
 3. 텍스트 생성 
 
 .. image:: https://user-images.githubusercontent.com/30430227/144155031-a5f63b3c-f8d4-4c86-9b76-5a3589cb04f3.png
 
+.. code-block::
 
-for i in readout:
-    placement = readout.index(i
-    bpy.ops.mesh.primitive_cube_add(size=1
-    new_bar = bpy.context.object
+   for i in readout:
+     placement = readout.index(i
+     bpy.ops.mesh.primitive_cube_add(size=1
+     new_bar = bpy.context.object
     
-    for vert in new_bar.data.vertices:
+     for vert in new_bar.data.vertices:
         vert.co[1] += 0.5 # y방향으로, co[0]- X 방향
         vert.co[0] += placement*bar_space + 0.5
         
@@ -570,32 +582,35 @@ for i in readout:
 
 -bpy.ops –사용자가 GUI 상에서 블렌더와 상호작용하는 모든 행위에 대한 operation을 다루는 모듈 –object를 조작하는 행위들을 bpy.ops를 통해 스크립트에서 구현이 가능
 
-import bpy
-from mathutils import Vector
-from math import inf, radians
-import os
+.. code-block::
+
+ import bpy
+ from mathutils import Vector
+ from math import inf, radians
+ import os
 
 bpy, mathutils 블렌더 모듈
 
 
 2. 함수 생성
 
-.. code-block:: console
+.. code-block::
 
-reset_blender_data – 스크립트 실행 전에 불필요한 데이터들을 삭제하는 함수
-create_cube – 인자로 받은 위치와 사이즈를 통해 직육면체를 생성하고 배치하는 함수
-set_object_color_rgba – 블렌더 object의 색을 설정하는 함수
-get_boundary_info – 블렌더 object를 감싸는 bounding box의 정보를 계산하여 반환하는 함수
-create_floor_plane – 블렌더 object 밑에 바닥면을 생성하는 함수
-create_camera – 특정 물체를 바라보는 카메라 object를 생성하는 함수
-create_sunlight – 태양광에 해당하는 조명 object를 생성하는 함수
-save_image_with_gpu – 렌더링에 사용할 엔진 설정 – 해상도 설정 – 인자로 받은 경로에 렌더링 결과 사진을 저장
+ reset_blender_data – 스크립트 실행 전에 불필요한 데이터들을 삭제하는 함수
+ create_cube – 인자로 받은 위치와 사이즈를 통해 직육면체를 생성하고 배치하는 함수
+ set_object_color_rgba – 블렌더 object의 색을 설정하는 함수
+ get_boundary_info – 블렌더 object를 감싸는 bounding box의 정보를 계산하여 반환하는 함수
+ create_floor_plane – 블렌더 object 밑에 바닥면을 생성하는 함수
+ create_camera – 특정 물체를 바라보는 카메라 object를 생성하는 함수
+ create_sunlight – 태양광에 해당하는 조명 object를 생성하는 함수
+ save_image_with_gpu – 렌더링에 사용할 엔진 설정 – 해상도 설정 – 인자로 받은 경로에 렌더링 결과 사진을 저장
 
 
 `코딩`
 
+.. code-block:: console
 
-def reset_blender_data(:
+ def reset_blender_data(:
     for bpy_data_iter in (
             bpy.data.objects,
             bpy.data.meshes,
@@ -606,7 +621,7 @@ def reset_blender_data(:
         for id_data in bpy_data_iter:
             bpy_data_iter.remove(id_data
             
-def create_cube(location, scale:
+ def create_cube(location, scale:
     bpy.ops.mesh.primitive_cube_add(size=1.0
     cube_object = bpy.context.active_object
     cube_object.name = "cube"
@@ -614,7 +629,7 @@ def create_cube(location, scale:
     cube_object.scale = scale
     return cube_object        
     
-def set_object_color_rgba(blender_object, color:
+ def set_object_color_rgba(blender_object, color:
     material = bpy.data.materials.new(name=blender_object.name
     material.use_nodes = True
 
@@ -624,7 +639,7 @@ def set_object_color_rgba(blender_object, color:
     blender_object.data.materials.append(material
     
     
-def get_boundary_info(blender_object:
+ def get_boundary_info(blender_object:
     bpy.context.view_layer.update(
 
     min_point = [inf, inf, inf]
@@ -654,14 +669,17 @@ def get_boundary_info(blender_object:
 
     return boundary_info
 
+.. code-block::
+
+ 생성한 큐브 밑에 바닥면을 생성할 때 필요한 정보를 구하기 위해 만든 함수입니다. 
+ 블렌더는 object의 bound_box 속성에서 해당 object를 감싸는 bounding box의 8개 정점에 대한 정보를 제공합니다. 하지만 이 정보들은 모델  좌표계 기준의 좌표이기 때문에 이를 월드 좌표계로의 변환이 필요합니다.
+ 
+ 모델 좌표계를 월드 좌표계로 변환해주는 월드 변환 행결은 object의 matrix_world 속성을 통해 알 수 있습니다. 블렌더에서는 효율성을 위해 object의 transform이 변경되어도 바로 matrix_world 속성을 다시 계산하여 갱신하지 않습니다. 따라서 사용자는 bpy.context.view_layer.update(를 호출하여 갱신을 요청해야 matrix_world 속성이 갱신됩니다.
+ 갱신한 matrix_world에 bounding box의 각 정점을 곱하면 해당 정점의 월드 좌표계를 구할 수 있습니다. @는 mathutils에서 제공하는 연산으로 행렬 및 벡터의 곱하기 연산을 의미합니다. 정점들의 월드 좌표계를 이용하여 최소값, 최대값, 중점, 길이를 계산하면 해당 정보들을 딕셔너리로 반환해줍니다.  
+
 .. code-block:: console
 
-생성한 큐브 밑에 바닥면을 생성할 때 필요한 정보를 구하기 위해 만든 함수입니다. 
-블렌더는 object의 bound_box 속성에서 해당 object를 감싸는 bounding box의 8개 정점에 대한 정보를 제공합니다. 하지만 이 정보들은 모델 좌표계 기준의 좌표이기 때문에 이를 월드 좌표계로의 변환이 필요합니다.
-모델 좌표계를 월드 좌표계로 변환해주는 월드 변환 행결은 object의 matrix_world 속성을 통해 알 수 있습니다. 블렌더에서는 효율성을 위해 object의 transform이 변경되어도 바로 matrix_world 속성을 다시 계산하여 갱신하지 않습니다. 따라서 사용자는 bpy.context.view_layer.update(를 호출하여 갱신을 요청해야 matrix_world 속성이 갱신됩니다.
-갱신한 matrix_world에 bounding box의 각 정점을 곱하면 해당 정점의 월드 좌표계를 구할 수 있습니다. @는 mathutils에서 제공하는 연산으로 행렬 및 벡터의 곱하기 연산을 의미합니다. 정점들의 월드 좌표계를 이용하여 최소값, 최대값, 중점, 길이를 계산하면 해당 정보들을 딕셔너리로 반환해줍니다.  
-
-def create_floor_plane(blender_object:
+ def create_floor_plane(blender_object:
     boundary_info = get_boundary_info(blender_object
     min_point = boundary_info["min_point"]
     center_point = boundary_info["center_point"]
@@ -677,7 +695,9 @@ def create_floor_plane(blender_object:
     
 바닥면의 x,y좌표는 object의 중심의 x,y좌표와 일치시켜주고, z좌표는 object의 z좌표 중 가장 작은 값으로 설정해 줍니다. scale의 경우 카메라 화면에 꽉 차도록 제가 임의로 설정
 
-def create_camera(location, target_vector:
+.. code-block:: console
+
+ def create_camera(location, target_vector:
     camera_data = bpy.data.cameras.new("Main Camera"
     camera_data.lens = 50
 
@@ -712,7 +732,9 @@ bpy.context.scene는 현재 씬을 가리키는데, 현재 씬에 대해서 coll
 
 이 회전값은 쿼터니안 각이기 때문에, 오일러 각을 사용하여 카메라의 회전값을 설정하기 위하여 to_euler(를 통해 쿼터니안을 오일러로 변환해 각도를 설정합니다.
 
-def create_sunlight(:
+.. code-block:: console
+
+ def create_sunlight(:
     light_data = bpy.data.lights.new(name="sun", type="SUN"
     light_data.energy = 4.5
 
@@ -728,7 +750,9 @@ def create_sunlight(:
     
 여기서는 간단하게 빛의 세기만을 설정합니다.광원 object를 만드는 과정은 카메라 object를를 만드는 것과 똑같습니다. 다만 방향성 광원의 경우 광원의 방향만 중요하기 때문에 위치 대신 회전값을 설정하였습니다.
 
-def save_image_with_gpu(resolution, file_path, file_name:
+.. code-block:: console
+
+ def save_image_with_gpu(resolution, file_path, file_name:
     scene = bpy.context.scene
 
     scene.render.resolution_x = resolution
@@ -762,16 +786,18 @@ def save_image_with_gpu(resolution, file_path, file_name:
     
 여기서는 Cycles 엔진을 사용하여 렌더링하며, Nvidia GPU가 있다는 가정하에 gpu를 이용하여 렌더링 속도를 빠르게 하였습니다.
 
- 해상도에 해당하는 x축 픽셀수와 y축 픽셀수는 scene.render에서 설정하는데 여기서는 정사각형 형태로 설정하였습니다.
+해상도에 해당하는 x축 픽셀수와 y축 픽셀수는 scene.render에서 설정하는데 여기서는 정사각형 형태로 설정하였습니다.
  scene.cycles에서는 GPU 설정 및 잡음 제거를 위한 설정을 해줍니다.
-그리고 GPU 사용 설정을 위해서는 추가적으로 Cycles 애드온도 설정이 필요하기 때문에, bpy.context.preferences.addons[‘cycles’].preferences를 통해 애드온 설정을 따로 해주었습니다.
+ 그리고 GPU 사용 설정을 위해서는 추가적으로 Cycles 애드온도 설정이 필요하기 때문에, bpy.context.preferences.addons[‘cycles’].preferences를 통해 애드온 설정을 따로 해주었습니다.
 scene.render.image_settings 에서는 저장할 아웃풋 이미지의 포멧 및 압축률과 같은 설정을 할 수 있는데 여기서는 단순히 png 형식으로 저장하도록 설정하였습니다.
 scene.render에서 저장할 디렉토리를 설정하고, 마지막으로 bpy.ops.render.render를 통해 렌더링 및 위에서 설정한 형식으로 결과물을 저장합니다.   
 
 
 3. Main 함수 
 
-if __name__ == "__main__":
+.. code-block:: console
+
+ if __name__ == "__main__":
     reset_blender_data(
 
     cube_loc = (0, 0, 0
@@ -799,18 +825,20 @@ blender --background --python D:\test.py
 테스트
 ------
 
-import bpy
-from mathutils import Vector
-from math import inf, radians
-import os
+.. code-block:: console
 
-def reset_blender_data(:
+ import bpy
+ from mathutils import Vector
+ from math import inf, radians
+ import os
+
+ def reset_blender_data(:
     for bpy_data_iter in (bpy.data.objects, bpy.data.meshes, bpy.data.cameras:
         for id_data in bpy_data_iter:
             bpy_data_iter.remove(id_data
             
  
-def create_cube(location,scale:
+ def create_cube(location,scale:
     bpy.ops.mesh.primitive_cube_add( 
     cube_object = bpy.context.active_object
     cube_object.name = 'cube'
@@ -838,7 +866,7 @@ def create_cube(location,scale:
     
     return cube_object
 
-def set_object_color_rgba(blender_object, color:
+ def set_object_color_rgba(blender_object, color:
     material = bpy.data.materials.new(name=blender_object.name
     material.use_nodes = True
 
@@ -847,10 +875,10 @@ def set_object_color_rgba(blender_object, color:
 
     blender_object.data.materials.append(material
 
-def get_boundary_info(blender_object:
+ def get_boundary_info(blender_object:
     bpy.context.view_layer.update(
            
-if __name__ == '__main__':
+ if __name__ == '__main__':
     reset_blender_data(
     
     cube_obj = create_cube((2,2,0,(2,1,3
@@ -864,15 +892,17 @@ if __name__ == '__main__':
 
 .. image:: https://user-images.githubusercontent.com/30430227/144806380-7b184d51-c45c-4679-8385-ec6b407a1666.png
 
-import bpy
-import math as m
+.. code-block:: console
 
-ob = bpy.data.objects['Cube'] # bpy.context.active_object
-frame_number = 0
-x =0
-y =0
+ import bpy
+ import math as m
 
-for i in range(0,500:
+ ob = bpy.data.objects['Cube'] # bpy.context.active_object
+ frame_number = 0
+ x =0
+ y =0
+
+ for i in range(0,500:
     bpy.context.scene.frame_set(frame_number
     x+=.3
     y+=.3
@@ -885,15 +915,17 @@ for i in range(0,500:
 
 .. image:: https://user-images.githubusercontent.com/30430227/144807165-7d5a9d3a-ccb6-4316-97c2-5773e1e5c57a.png
 
-import bpy
-import math as m
+.. code-block:: console
 
-ob = bpy.data.objects['Cube'] # bpy.context.active_object
-frame_number = 0
-x =0
-y =0
+ import bpy
+ import math as m
 
-for i in range(0,500:
+ ob = bpy.data.objects['Cube'] # bpy.context.active_object
+ frame_number = 0
+ x =0
+ y =0
+
+ for i in range(0,500:
     bpy.context.scene.frame_set(frame_number
     x+=.3
     y+=.3
@@ -906,17 +938,19 @@ for i in range(0,500:
 
 .. image:: https://user-images.githubusercontent.com/30430227/144808637-7b87f597-f646-428e-8c29-d41938d926cd.png
 
-import bpy
-import math as m
+.. code-block:: console
 
-ob = bpy.data.objects['Cube'] # bpy.context.active_object
-frame_number = 0
+ import bpy
+ import math as m
 
-n =20
-r =10
-x =0
+ ob = bpy.data.objects['Cube'] # bpy.context.active_object
+ frame_number = 0
 
-for i in range(0,250:
+ n =20
+ r =10
+ x =0
+
+ for i in range(0,250:
     bpy.context.scene.frame_set(frame_number
     angle = ((i*m.pi/n
     y = r*m.cos(angle
