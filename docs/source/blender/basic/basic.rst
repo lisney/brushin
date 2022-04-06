@@ -3,5 +3,5 @@ BASIC
 
 .. toctree::
    
-   basic
+   basicA
    basic30
