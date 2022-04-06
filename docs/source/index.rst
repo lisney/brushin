@@ -1,4 +1,4 @@
-Welcome to Lumache's documentation!
+Welcome to 기능튜토리얼!
 ===================================
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
@@ -19,6 +19,5 @@ Contents
 .. toctree::
    :maxdepth: 3
 
-   usage
    blender/basic
    blender/basic30
