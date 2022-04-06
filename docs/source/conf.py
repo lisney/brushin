@@ -34,4 +34,4 @@ html_theme = 'sphinx_rtd_theme'
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
-html_logo = 'https://github.com/lisney/kozilTuto/blob/main/docs/source/4g2.jpg'
+html_logo = '4g2.jpg'
