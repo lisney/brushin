@@ -17,11 +17,10 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
 
    usage
    api
-   
-.. toctree::
 
    blender/basic
    blender/basic30
