@@ -5,5 +5,5 @@ Blender 3D
 
 .. toctree::
 
-   basic
+   basic/basic
    2D/2Dfx
