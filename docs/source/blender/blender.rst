@@ -6,4 +6,4 @@ Blender 3D
 .. toctree::
 
    basic/basic
-   2D/2Dfx
+   2D/2D
