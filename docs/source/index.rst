@@ -19,4 +19,4 @@ Contents
 .. toctree::
    :maxdepth: 3
 
-   blender
+   blender/blender
