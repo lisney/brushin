@@ -2,7 +2,8 @@
 ======
 
 .. toctree:: 
-
+   :maxdepth: 2
+   
    basic
    rigify
    gameAction
