@@ -20,3 +20,8 @@ Contents
 
    usage
    api
+   
+.. toctree::
+
+   blender/basic
+   blender/basic30
