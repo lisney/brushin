@@ -20,6 +20,5 @@ Contents
    :maxdepth: 3
 
    usage
-   api
    blender/basic
-      blender/basic30
+   blender/basic30
