@@ -19,6 +19,4 @@ Contents
 .. toctree::
    :maxdepth: 3
 
-   blender/basic
-   blender/basic30
-   blender/2Dfx
+   blender
