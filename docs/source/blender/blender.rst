@@ -6,4 +6,5 @@ Blender 3D
 .. toctree::
 
    basic/basic
-   2D/2Dindex
+   2D/index
+   mograph/index
