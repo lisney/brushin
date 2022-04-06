@@ -21,6 +21,5 @@ Contents
 
    usage
    api
-
    blender/basic
-   blender/basic30
+      blender/basic30
