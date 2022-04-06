@@ -33,7 +33,7 @@ Weight Paint Mode 상태에서 ``Modifier Mapping`` 을 바꾸어 본다
 
 .. image:: https://user-images.githubusercontent.com/30430227/145061318-84b4ee5d-4365-41e2-b813-5ab36b0eda9b.png
 
-`갯수가 많을 때`
+*갯수가 많을 때*
 
 .. image:: https://user-images.githubusercontent.com/30430227/145061454-0c11b232-25ef-4083-b7af-4f5598d04fb2.png
 
@@ -43,11 +43,11 @@ Sculp
 
 1. 스컬핑 메쉬 바꾸기
 
-`바굴려는 메쉬에 커서 > Alt - Q -번쩍!`
+``바꿀려는 메쉬에 커서 > Alt - Q -번쩍!``
 
 2. Face Set -Show/Hide 단축키 'h' 설정 - 원래 블렌더 설정으로 바꾼다
 
-`sculpt.face_set_change_visibility`
+**sculpt.face_set_change_visibility**
 
 .. image:: https://user-images.githubusercontent.com/30430227/143410304-ace387e8-ec47-46ea-b660-1e448f5b465d.png
 
