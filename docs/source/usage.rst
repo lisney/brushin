@@ -26,6 +26,8 @@ will raise an exception.
 
 .. image:: https://github.com/lisney/kozilTuto/blob/main/docs/source/4g2.jpg?raw=true
 
+.. image:: https://user-images.githubusercontent.com/30430227/138903925-8a367010-263c-4e17-bd28-a3f100db5058.png
+
 >>> import 
 ['a','b']
 
