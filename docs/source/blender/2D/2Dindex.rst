@@ -4,3 +4,4 @@
 .. toctree::
    
    2Dfx
+   greasepencil
