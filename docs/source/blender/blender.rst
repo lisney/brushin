@@ -8,3 +8,5 @@ Blender 3D
    basic/basic
    2D/index
    mograph/index
+   character/index
+   etc/index
