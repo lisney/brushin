@@ -4,8 +4,7 @@
 .. toctree:: 
 
    basic
-   rigifyA
-   rigifyB
+   rigify
    gameAction
    P2Design
    
