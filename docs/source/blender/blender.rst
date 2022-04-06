@@ -7,4 +7,4 @@ Blender 3D
 
    basic
    basic30
-   2D/2
+   2D/2Dfx
