@@ -1,5 +1,5 @@
 GameAction
-------------
+============
 
 .. code-block:: console
 
