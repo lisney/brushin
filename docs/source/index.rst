@@ -21,3 +21,4 @@ Contents
 
    blender/basic
    blender/basic30
+   blender/2Dfx
