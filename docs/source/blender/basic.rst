@@ -51,10 +51,12 @@ Edge Slide에도 적용된다
 // curve.draw 명령을 입력하고 Mouse : Action : Press를 선택한다(WaitforInput체크를 끈다), 조합키를 Shift를 체크한다  
 //Shift + rightMouse 버튼으로 그린다
 
-`Manipulate Center Point Mode`  
+`Manipulate Center Point Mode`
+
 .. image:: https://user-images.githubusercontent.com/30430227/130587791-1b2f3b50-948e-45d8-a251-1559fc025adc.png
+
 //여러 오브젝트를 선택후 Scale 명령 시 중심점을 중심으로 <이동>한다
-<br>
+
 
 스컬핑
 -------
@@ -74,15 +76,14 @@ Edge Slide에도 적용된다
 
 `Blob과 Inflate 차이점 `: Blob은 한방향, Inflate은 양방향 
 
-<br>
 
 리깅
 -----
+
 `블랜더 본 선택 시 Active(흰색테두리)되지 않고 비활성(하늘색)되는 경우`
 //선택 시 해당 오브젝트를 바로 선택하지 말고 근처(살짝 옆부분)를 선택하면 된다
 
 `Child OF의 단짝 Visual Transform` 현재 보여지는 위치로 이동시킨다
-<br>
 
 애니메이션
 ----------
@@ -287,7 +288,6 @@ Nature
 //블랜더 File Output에 레이어를 만든 후 ID Mask 노드를 링크한다
 //에팩에서는 3DChennel에서 EXtracter 효과에서 선택한다
 
-<br>
 
 기타 팁
 -----------
@@ -368,12 +368,10 @@ ortho : 7, Align view>Align Active Camera to view(ctrl + alt + 0), 
 
 `Hide 단축키 설정` ; 오브젝트, 메쉬(에디트)모드에 'h', 'shift + h', 'alt + h'
 
-```
 ⓶Transform 단축키 설정
 //메뉴의 transform > tralslate 단축키를 Alt + w로설정한다
 //Preferences>Input에서 key-binding에서 ‘alt w’로 검색하여 기존의 Alt +w를(Clear Translate) Ctrl + w로 바꾼다)
 //나머지 rotate, scale도 같은 방법으로 바꾼다
-```
 
 `Extrude : 기본 alt x` 
 //메뉴설정 ; wm.call_menu 명령어>Name: VIEW3D_MT_edit_mesh_extrude(ctl +alt + x)
@@ -407,7 +405,7 @@ And then, I have to add the following shortcut (like for blender sho
 => view3d.select + case shift + Click left + center + object
 Because this initial shortcut does'nt seem to work :
 File/user preferences/input/3D view/3D view (global)/Select or Deselect All (Shift Select Mouse)
-//////////////////////////////////////////////////
+
 셋드라이버 지정 시 Error:Python auto-exection disabled에러
 // 이건 임시방편이고 아래 방법이 좋다///일단 파일로 저장한 후>Update Dependencies 버튼을 클릭하면 상단에 Auto-run disabled에서 Reload Trusted를 클릭하면 된다
 ////아래방법>>..User Preferences에서 이전버전에서는 System에 있었던 Auto Run Python Scripts가 File 탭에 존재하니..이걸 체크해주면 된다.
@@ -416,19 +414,17 @@ File/user preferences/input/3D view/3D view (global)/Select or Deselect A
 
 ⓼엣지 루프/링 선택 ctrl + alt + right/left M클릭
 
-```
-<br>
 
 기타단축키
 ----------
-```
+
 Edge Crease 단축키 설정하기 -> '.'
-타이어 만들기/link Dupe & Mirror 적용 > Ctrl + M
+//타이어 만들기/link Dupe & Mirror 적용 > Ctrl + M
 
 View All 단축키 'A' 3D커서 센터로 리셋 설정
 //Preperence 에서 'Center' 체크한다
 
-**Slide 단축키
+Slide 단축키
 //alt + W(무브)단축키 후 'G'키를 누르면 슬라이딩한다
 
 Rip (Fill)
@@ -549,10 +545,8 @@ Context Attribute : space_data.viewport_shade(반영할 속성은)
 //Dynatopo 와 Symmetry XYZ 단축키 설정하기
 //sculpt.dynamic_topology_toggle(ctrl + D)//wm.context_toggle//tool_settings.sculpt.use_symmetry_x
 
-```
 .. image:: https://user-images.githubusercontent.com/30430227/130591252-a5b39f6e-0918-49b3-8dd0-9af8ab73b24e.png
 
-```
 ⓾Mesh Select Mode::
 Edit 모드에서 마우스 오른버튼으로 3D커서를 사용하기 위해서는
 Mesh>Call Menu 중에
@@ -704,8 +698,7 @@ radians(sin(frame/30))*180// 시간이 지남에 따라 +-180로 주기 �
 `fSpy`
 : 오픈소스 이미지 카메라 매칭 프로그램
 
-`행성 텍스처`
-https://www.solarsystemscope.com/textures/
+`행성 텍스처 <https://www.solarsystemscope.com/textures>`_
 
 `Composition`
 //backdrop Viewer Node 단축키 : Ctrl + Shift + 클릭
@@ -900,8 +893,7 @@ Modifier에서 Armature를 Copy한 후 원래 Armature Modifier를 'Apply'한다
 포즈모드로 들어가 Apply Reset Pose한다
 #IK 로테이션 문제
 =Edit 모드에서 Bone을 꺽어야한다(포즈모드에서하면 안됨)
->>> 손과 발의 IK 본은 Root본에 Parent하고 Target은 힙본에 한다
-
+손과 발의 IK 본은 Root본에 Parent하고 Target은 힙본에 한다
 
 `Copy Location, Rotation`
 복사할려는 물체를 먼저 선택하고 대상을 나중에 선택한다
@@ -916,8 +908,7 @@ right click in the Location properties
 Bsurface 그룹에 있다
 
 `10 핫키`
-```
-//F9 :: Parameters Window
+>>>F9 :: Parameters Window
 //` :: View Pie Menu(마야처럼 마우스로 방향이동해서 바로 전환가능)
 //Alt :: Orbit 중 다시한번 Alt // Change Views(축 잠금)
 //z, Alt + z, Shift + z
@@ -926,7 +917,6 @@ Bsurface 그룹에 있다
 //    "                '-' 키 누르면 음수값 처리
 //Ctrl + Shift + '+' :: 반복 선택,에디트 모드에서 페이스를 특정 간격으로 연속 선택
 //컬렉션 Instant :: Shift + A
-```
 
 `2.8 카메라 이름 바꾸기 에러`
 //아웃라이너에서 이름을 바꾸어야 랜더카메라에 등록된다(카메라 오브젝트 탭에서 바꾸어봤자 안되더라)
@@ -935,11 +925,10 @@ Bsurface 그룹에 있다
 //툴바에서 마우스 오른 클릭 후 Flip to ~ 선택한다
 
 `PLY파일 vertex Color`
-```
-I open the file again and adjusted the Emission parameter in the Principled BDSF node and the image appeared in Object Mode. Problem solved! Thanks for your help! 
+
+>>> I open the file again and adjusted the Emission parameter in the Principled BDSF node and the image appeared in Object Mode. Problem solved! Thanks for your help! 
 :: Principled BSDF 재질 적용 후 Shader Editor 에서 Add>Input>Vertex Color
 :: 생성된 Attribute노드를 Emission 에 연결함
-```
 
 ` alt + space`
 //Object Editmode toggle
