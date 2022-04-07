@@ -4,7 +4,7 @@ Blender 3D
 블렌더 메뉴얼
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    
    basic/basic
    2D/index
