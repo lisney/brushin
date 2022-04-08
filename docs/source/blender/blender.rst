@@ -11,5 +11,6 @@ Blender 3D
    mograph/index
    character/index
    node/geometry
+   render/index
    physics/index
    etc/index
