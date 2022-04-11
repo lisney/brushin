@@ -20,3 +20,4 @@ Contents
    :maxdepth: 2
 
    blender/blender
+   freecad/index
