@@ -5,3 +5,4 @@ HTML5
    :maxdepth: 2
    
    basic
+   javascript
