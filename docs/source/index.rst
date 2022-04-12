@@ -22,6 +22,7 @@ Contents
    blender/blender
    rhino/rhino
    freecad/index
+   fusion/index
    html/index
 
    
