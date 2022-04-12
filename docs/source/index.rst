@@ -17,7 +17,7 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    blender/blender
    freecad/index
