@@ -21,3 +21,4 @@ Contents
 
    blender/blender
    freecad/index
+   rhino/index
