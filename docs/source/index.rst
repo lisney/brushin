@@ -20,7 +20,7 @@ Contents
    :maxdepth: 3
 
    blender/blender
-   rhino/index
+   rhino/rhino
    freecad/index
 
    
