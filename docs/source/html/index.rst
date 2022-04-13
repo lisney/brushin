@@ -6,3 +6,7 @@ HTML5
    
    basic
    javascript
+   mysql
+   nodejsA
+   nodejsB
+   babylonjs
